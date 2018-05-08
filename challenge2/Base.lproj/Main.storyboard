@@ -23,16 +23,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="26" y="52"/>
         </scene>
-        <!--View Controller-->
+        <!--Initial View Controller-->
         <scene sceneID="ixI-nx-Mcq">
             <objects>
-                <viewController id="TeN-kd-ykh" sceneMemberID="viewController">
+                <viewController id="TeN-kd-ykh" customClass="InitialViewController" customModule="challenge2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KsC-XL-Ewj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qXQ-Yh-rg2">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qXQ-Yh-rg2" customClass="GIDSignInButton">
                                 <rect key="frame" x="67" y="269" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -41,10 +42,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="55y-38-xCX"/>
                     </view>
+                    <connections>
+                        <outlet property="googleButton" destination="qXQ-Yh-rg2" id="EXB-Lu-ugz"/>
+                        <segue destination="BV1-FR-VrT" kind="show" identifier="aSegue" id="Hsk-IY-iHK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vuj-Pw-j5l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-718" y="133"/>
+            <point key="canvasLocation" x="-1041" y="52"/>
         </scene>
     </scenes>
 </document>
