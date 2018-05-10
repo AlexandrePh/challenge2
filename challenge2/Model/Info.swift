@@ -8,6 +8,8 @@
 
 import Foundation
 
-class Info {
+class Info:Codable {
     static var isLogged = false
+    static var messageReceived = ""
+    
 }

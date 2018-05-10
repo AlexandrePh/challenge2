@@ -9,19 +9,18 @@
 /* Begin PBXBuildFile section */
 		0B4D21BFE56D6648A7B8F8F5 /* Pods_challenge2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E012CD79F0987639AC27B86 /* Pods_challenge2.framework */; };
 		1519080E93A9066F36589EBD /* Pods_challenge2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB26F189842C40347CE3C82A /* Pods_challenge2Tests.framework */; };
+		4621D8BE20A4D31D00556125 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4621D8BD20A4D31D00556125 /* InitialViewController.swift */; };
+		4648707320A374AE00746B31 /* Bluetooth connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648707220A374AE00746B31 /* Bluetooth connectivity.swift */; };
 		46E902A920A0DD920034B8F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E902A820A0DD920034B8F8 /* AppDelegate.swift */; };
 		46E902AB20A0DD920034B8F8 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 46E902AA20A0DD920034B8F8 /* GameScene.sks */; };
 		46E902AD20A0DD920034B8F8 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 46E902AC20A0DD920034B8F8 /* Actions.sks */; };
-		46E902AF20A0DD920034B8F8 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E902AE20A0DD920034B8F8 /* GameScene.swift */; };
-		46E902B120A0DD920034B8F8 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E902B020A0DD920034B8F8 /* GameViewController.swift */; };
 		46E902B420A0DD920034B8F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E902B220A0DD920034B8F8 /* Main.storyboard */; };
 		46E902B620A0DD930034B8F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E902B520A0DD930034B8F8 /* Assets.xcassets */; };
 		46E902B920A0DD930034B8F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E902B720A0DD930034B8F8 /* LaunchScreen.storyboard */; };
 		46E902C420A0DD930034B8F8 /* challenge2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E902C320A0DD930034B8F8 /* challenge2Tests.swift */; };
 		46E902CF20A0E2DF0034B8F8 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46E902CE20A0E2DF0034B8F8 /* credentials.plist */; };
-		46E902D120A0E3230034B8F8 /* NetworkDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E902D020A0E3230034B8F8 /* NetworkDao.swift */; };
+		46E902D120A0E3230034B8F8 /* GoogleNetworkDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E902D020A0E3230034B8F8 /* GoogleNetworkDao.swift */; };
 		46E902D320A0E61F0034B8F8 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E902D220A0E61F0034B8F8 /* Info.swift */; };
-		46E902D520A0E67D0034B8F8 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E902D420A0E67D0034B8F8 /* InitialViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,12 +35,12 @@
 
 /* Begin PBXFileReference section */
 		161844A911233E4C98BD0BE1 /* Pods-challenge2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-challenge2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-challenge2/Pods-challenge2.debug.xcconfig"; sourceTree = "<group>"; };
+		4621D8BD20A4D31D00556125 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		4648707220A374AE00746B31 /* Bluetooth connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bluetooth connectivity.swift"; sourceTree = "<group>"; };
 		46E902A520A0DD920034B8F8 /* challenge2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = challenge2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E902A820A0DD920034B8F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46E902AA20A0DD920034B8F8 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		46E902AC20A0DD920034B8F8 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		46E902AE20A0DD920034B8F8 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		46E902B020A0DD920034B8F8 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		46E902B320A0DD920034B8F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		46E902B520A0DD930034B8F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46E902B820A0DD930034B8F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,9 +49,8 @@
 		46E902C320A0DD930034B8F8 /* challenge2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = challenge2Tests.swift; sourceTree = "<group>"; };
 		46E902C520A0DD930034B8F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46E902CE20A0E2DF0034B8F8 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
-		46E902D020A0E3230034B8F8 /* NetworkDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDao.swift; sourceTree = "<group>"; };
+		46E902D020A0E3230034B8F8 /* GoogleNetworkDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleNetworkDao.swift; sourceTree = "<group>"; };
 		46E902D220A0E61F0034B8F8 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
-		46E902D420A0E67D0034B8F8 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		4E012CD79F0987639AC27B86 /* Pods_challenge2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_challenge2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5079FD1C61659FD53FAF7BB6 /* Pods-challenge2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-challenge2.release.xcconfig"; path = "Pods/Target Support Files/Pods-challenge2/Pods-challenge2.release.xcconfig"; sourceTree = "<group>"; };
 		840DA09CC095FA5023022C89 /* Pods-challenge2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-challenge2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-challenge2Tests/Pods-challenge2Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -80,6 +78,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4648706E20A3733300746B31 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				46E902D220A0E61F0034B8F8 /* Info.swift */,
+				4648707220A374AE00746B31 /* Bluetooth connectivity.swift */,
+				46E902D020A0E3230034B8F8 /* GoogleNetworkDao.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4648706F20A3734200746B31 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4621D8BD20A4D31D00556125 /* InitialViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4648707020A3734C00746B31 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				46E902B220A0DD920034B8F8 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4648707120A3737600746B31 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				46E902AA20A0DD920034B8F8 /* GameScene.sks */,
+				46E902B520A0DD930034B8F8 /* Assets.xcassets */,
+				46E902AC20A0DD920034B8F8 /* Actions.sks */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		46E9029C20A0DD920034B8F8 = {
 			isa = PBXGroup;
 			children = (
@@ -104,15 +138,10 @@
 			isa = PBXGroup;
 			children = (
 				46E902A820A0DD920034B8F8 /* AppDelegate.swift */,
-				46E902D020A0E3230034B8F8 /* NetworkDao.swift */,
-				46E902D220A0E61F0034B8F8 /* Info.swift */,
-				46E902AA20A0DD920034B8F8 /* GameScene.sks */,
-				46E902AC20A0DD920034B8F8 /* Actions.sks */,
-				46E902AE20A0DD920034B8F8 /* GameScene.swift */,
-				46E902B020A0DD920034B8F8 /* GameViewController.swift */,
-				46E902D420A0E67D0034B8F8 /* InitialViewController.swift */,
-				46E902B220A0DD920034B8F8 /* Main.storyboard */,
-				46E902B520A0DD930034B8F8 /* Assets.xcassets */,
+				4648706E20A3733300746B31 /* Model */,
+				4648706F20A3734200746B31 /* Controller */,
+				4648707020A3734C00746B31 /* View */,
+				4648707120A3737600746B31 /* Resources */,
 				46E902B720A0DD930034B8F8 /* LaunchScreen.storyboard */,
 				46E902BA20A0DD930034B8F8 /* Info.plist */,
 			);
@@ -337,10 +366,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				46E902D320A0E61F0034B8F8 /* Info.swift in Sources */,
-				46E902AF20A0DD920034B8F8 /* GameScene.swift in Sources */,
-				46E902D120A0E3230034B8F8 /* NetworkDao.swift in Sources */,
-				46E902D520A0E67D0034B8F8 /* InitialViewController.swift in Sources */,
-				46E902B120A0DD920034B8F8 /* GameViewController.swift in Sources */,
+				46E902D120A0E3230034B8F8 /* GoogleNetworkDao.swift in Sources */,
+				4621D8BE20A4D31D00556125 /* InitialViewController.swift in Sources */,
+				4648707320A374AE00746B31 /* Bluetooth connectivity.swift in Sources */,
 				46E902A920A0DD920034B8F8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
