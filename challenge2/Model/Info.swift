@@ -10,6 +10,6 @@ import Foundation
 
 class Info:Codable {
     static var isLogged = false
-    static var messageReceived = ""
+    static var message = "entao a nacao do fogo atacou"
     
 }

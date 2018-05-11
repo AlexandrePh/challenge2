@@ -8,22 +8,46 @@
 
 import UIKit
 
-class InitialViewController: UIViewController,BluetoothAlerts {
+class InitialViewController: UIViewController,BluetoothDelegate {
+    func messageAlert(message: String) {
+        showAlert(message: message)
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        bluetooth.bluetoothDelegate = self
         // Do any additional setup after loading the view.
     }
-    func messageAlert(mesage: String) {
-        print(mesage)
-    }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    
+    private func showAlert(message:String){
+        
+        let alert = UIAlertController(title: "Sucesso!!", message: message, preferredStyle: UIAlertControllerStyle.alert)
+            
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { action in
+                print(">>>>>>>>>>Olá!!!")
+                
+            }))
+            
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+      
+        
+    }
+    
+    
+    
+    
+    
+    
+
 
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

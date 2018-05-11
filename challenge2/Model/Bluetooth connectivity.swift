@@ -9,37 +9,87 @@
 import Foundation
 import MultipeerConnectivity
 
-protocol BluetoothAlerts {
-    func messageAlert(mesage: String)
+protocol BluetoothDelegate {
+    func messageAlert(message: String)
 }
 
-class BluetoothConnectivity: NSObject, MCSessionDelegate{
+
+let bluetooth = BluetoothConnectivity.sharedInstance
+
+class BluetoothConnectivity: NSObject, MCSessionDelegate, MCNearbyServiceBrowserDelegate{
+    
+    static var sharedInstance = BluetoothConnectivity()
     
     var peerID:MCPeerID!
     var mcSession:MCSession!
-    var mcAdvertiserAssistant:MCAdvertiserAssistant!
+    var mcBrowser:MCNearbyServiceBrowser!
+    var advertiser:MCNearbyServiceAdvertiser!
     
-    var alerts:BluetoothAlerts?
+    var bluetoothDelegate:BluetoothDelegate?
     
+    var serviceType = "trolling"
+    
+   
     
     private override init() {
         super.init()
         peerID = MCPeerID(displayName: UIDevice.current.name)
         mcSession = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .required)
         mcSession.delegate = self
-
-        mcAdvertiserAssistant = MCAdvertiserAssistant(serviceType: "ba-td", discoveryInfo: nil, session: self.mcSession)
-        mcAdvertiserAssistant.start()
+        
+        startAvertiser()
+        
+        
+    }
+    func startBrowser(){
+        mcBrowser = MCNearbyServiceBrowser.init(peer: peerID, serviceType: serviceType)
+        mcBrowser.delegate = self
+        mcBrowser.startBrowsingForPeers()
+        
+        
+    }
+    func startAvertiser(){
+        advertiser = MCNearbyServiceAdvertiser.init(peer: peerID, discoveryInfo: nil, serviceType: serviceType)
+        enable()
     }
     
     
-    func showMessage(){
-        if let alertsObject = self.alerts {
-            alertsObject.messageAlert(mesage: Info.messageReceived)
+    func enable(){
+       advertiser.startAdvertisingPeer()
+    }
+    
+    func disable()  {
+       advertiser.startAdvertisingPeer()
+    }
+    
+    
+    
+    
+    
+    //MARK: - BlutoothAlerts protocol CALL
+    private func showMessage(){
+        if let alertsObject = self.bluetoothDelegate {
+            alertsObject.messageAlert(message: Info.message)
         }
     }
     
     
+    //MARK: - MCNearbyServiceBrowserDelegate
+    func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
+        let data:Data = Data(base64Encoded: Info.message)!
+        
+        
+        mcBrowser.invitePeer(peerID, to: mcSession, withContext: data, timeout: 10)
+        
+    }
+    func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
+        
+    }
+    func browser(_ browser: MCNearbyServiceBrowser, didNotStartBrowsingForPeers error: Error) {
+        
+    }
+    
+    //MARK: - MCSessionDelegate implementation
     func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
         switch state {
         case MCSessionState.connected:
@@ -55,12 +105,13 @@ class BluetoothConnectivity: NSObject, MCSessionDelegate{
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         do {
-            Info.messageReceived = try JSONDecoder().decode(String.self, from: data)
-            
+            let message =  try JSONDecoder().decode(String.self, from: data)
+            Info.message = message
             
         } catch  {
             fatalError()
         }
+        
         showMessage()
         
     }
